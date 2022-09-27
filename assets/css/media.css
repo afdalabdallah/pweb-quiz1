@@ -1,0 +1,78 @@
+/*breakpoints = {
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
+} */
+
+@media screen and (min-width: 80em) {
+  .home-main {
+    gap: 12em;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  body {
+    padding: 1em 5em;
+  }
+  .navbar-custom {
+    padding: 0.5em 0 2em 0;
+    justify-content: space-between;
+  }
+  .home-hello {
+    font-size: 1.6em;
+  }
+  .my-name {
+    font-size: 4.5em;
+  }
+  .home-subtext {
+    font-size: 2.5em;
+  }
+  #homeMain {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .navlink-wrap {
+    display: flex;
+  }
+  .home-img-wrap {
+    width: 370px;
+    height: 370px;
+  }
+  .my-logo {
+    display: block;
+  }
+  .burger-nav {
+    display: none;
+  }
+  .contact-img-wrap {
+    flex-direction: row;
+  }
+  #contactMain {
+    margin-top: 6em;
+  }
+  .profile-line {
+    width: 90px;
+  }
+  .profile-text {
+    width: 60%;
+    font-size: 1.1em;
+  }
+  .profile-cv,
+  .tech-stack {
+    width: 60%;
+  }
+  .profile-title {
+    font-size: 2.5em;
+  }
+  .hmt-img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 47.8em) {
+  .hmt-img {
+    width: 320px;
+  }
+}
