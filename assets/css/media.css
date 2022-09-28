@@ -13,6 +13,9 @@
 }
 
 @media screen and (min-width: 48em) {
+  .profile-text {
+    padding: 0;
+  }
   body {
     padding: 1em 5em;
   }
