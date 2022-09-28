@@ -7,7 +7,7 @@ body {
 
 body {
   margin: 0;
-  padding: 1em 1.5em;
+
   background-color: #141414;
   font-size: 16px;
   color: white;
@@ -33,7 +33,6 @@ a {
 .navlink-wrap > a {
   font-size: 1.2em;
   text-decoration: none;
-  color: white;
 }
 
 .navlink-wrap > a:hover {
@@ -121,25 +120,38 @@ a {
 }
 
 /* Profile Page */
-.profile-line {
-  width: 45px;
+.profile-line,
+.profile-line-r {
+  display: none;
+  width: 90px;
   background-color: white;
   height: 1px;
 }
 
+.profile-line {
+  animation: slideLeftFade 1s;
+}
+
+.profile-line-r {
+  animation: slideRightFade 1s;
+}
+
 .profile-text {
   margin-top: 12px;
+  padding: 0 1.5em;
   font-size: 1em;
 }
 
 .profile-text-wrap {
+  animation: fadeAnimation 1.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .profile-title {
-  font-size: 1.5em;
+  animation: fadeAnimation 1.5s;
+  font-size: 2em;
 }
 
 .profile-cv {
@@ -153,4 +165,136 @@ a {
 
 .food-img {
   width: 50%;
+}
+
+.mobile-nav {
+  z-index: 2;
+  position: absolute;
+  animation: mobileNav 1s;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: #242424;
+}
+
+.nav-close-btn {
+  text-align: end;
+}
+
+@keyframes mobileNav {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.mbl-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.mbl-nav-list > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.selected-link {
+  color: #79c7fa !important;
+}
+
+.nav-act {
+  display: none;
+}
+
+@keyframes slideLeftFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideRightFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeAnimationUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideAnimationUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.food-wrap {
+  animation: fadeAnimationUp 1.5s;
+}
+
+.first-animation,
+.scnd-animation,
+.thrd-animation,
+.frth-animation,
+.fifth-animation {
+  opacity: 0;
+  transition: transform 1s;
+  animation: slideAnimationUp 1s ease 1 forwards;
+}
+
+.first-animation {
+  animation-delay: 0.1s;
+}
+
+.scnd-animation {
+  animation-delay: 0.2s;
+}
+.thrd-animation {
+  animation-delay: 0.3s;
+}
+.frth-animation {
+  animation-delay: 0.4s;
+}
+.fifth-animation {
+  animation-delay: 0.5s;
 }

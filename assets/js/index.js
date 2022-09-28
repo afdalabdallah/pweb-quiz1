@@ -79,6 +79,7 @@ if (document.title == "Food") {
     const div75 = document.createElement("div");
     div75.classList.add("w-75", "mx-auto");
     const title = document.createElement("h3");
+    title.classList.add("home-subtext");
     title.innerHTML = `${i + 1}. ${foodArr[i].name}`;
 
     div75.appendChild(title);
@@ -104,6 +105,7 @@ if (document.title == "Food") {
     const div75 = document.createElement("div");
     div75.classList.add("w-75", "mx-auto");
     const title = document.createElement("h3");
+    title.classList.add("home-subtext");
     title.innerHTML = `${i + 1}. ${tourData[i].name}`;
 
     div75.appendChild(title);
@@ -123,5 +125,24 @@ if (document.title == "Food") {
     div75.appendChild(description);
 
     document.getElementById("touristList").appendChild(div75);
+  }
+}
+
+function navClick() {
+  const ele = document.getElementById("mobileNav");
+  if (ele.classList.contains("nav-act")) {
+    ele.classList.remove("nav-act");
+  } else {
+    ele.classList.add("nav-act");
+  }
+}
+
+const nav = document.getElementsByClassName("nav-link");
+const title = document.title;
+for (var i = 0; i < nav.length; i++) {
+  if (nav[i].innerHTML == title) {
+    nav[i].classList.add("selected-link");
+  } else {
+    nav[i].classList.remove("selected-link");
   }
 }
